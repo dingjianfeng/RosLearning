@@ -136,7 +136,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/xfros_node.cpp)
 add_executable(tts_voice_node src/xf_tts.cpp)
-add_executable(tuling_nlp_node src/tuling_arv.cpp)
+add_executable(tuling_arv_node src/tuling_arv.cpp)
 add_executable(xf_asr_node src/xf_asr.cpp src/speech_recognizer.cpp src/linuxrec.cpp)
 
 ## Rename C++ executable without prefix
@@ -156,7 +156,7 @@ add_executable(xf_asr_node src/xf_asr.cpp src/speech_recognizer.cpp src/linuxrec
 target_link_libraries(tts_voice_node
     ${catkin_LIBRARIES} -lmsc -lrt -ldl -lpthread
 )
-target_link_libraries(tuling_nlp_node
+target_link_libraries(tuling_arv_node
     ${catkin_LIBRARIES} -lcurl -ljsoncpp
 )
 target_link_libraries(xf_asr_node 

@@ -495,7 +495,7 @@ static int get_pcm_device_cnt(snd_pcm_stream_t stream)
 	if (snd_device_name_hint(-1, "pcm", &hints) < 0)
 		return 0;
 	n = hints;
-	filter = (char *)(stream == SND_PCM_STREAM_CAPTURE ? "Input" : "Output");
+	filter = (char*)(stream == SND_PCM_STREAM_CAPTURE ? "Input" : "Output");
 	while (*n != NULL) {
 		io = snd_device_name_get_hint(*n, "IOID");
 		name = snd_device_name_get_hint(*n, "NAME");
@@ -544,10 +544,10 @@ static int list_pcm(snd_pcm_stream_t stream, char**name_out,
 		goto fail; 
 	}
 
-	*name_out = (char *)calloc(sizeof(char *) , (1+cnt));
+	*name_out =(char*)(calloc(sizeof(char *) , (1+cnt)));
 	if (*name_out == NULL)
 		goto fail;
-	*desc_out = (char *)calloc(sizeof(char *) , (1 + cnt));
+	*desc_out = (char*)(calloc(sizeof(char *) , (1 + cnt)));
 	if (*desc_out == NULL)
 		goto fail;
 
@@ -557,7 +557,7 @@ static int list_pcm(snd_pcm_stream_t stream, char**name_out,
 	name = name_out;
 	descr = desc_out;
 
-	filter = stream == SND_PCM_STREAM_CAPTURE ? "Input" : "Output";
+	filter = (char*)(stream == SND_PCM_STREAM_CAPTURE ? "Input" : "Output");
 	while (*n != NULL && i < cnt) {
 		*name = snd_device_name_get_hint(*n, "NAME");
 		*descr = snd_device_name_get_hint(*n, "DESC");
@@ -568,7 +568,7 @@ static int list_pcm(snd_pcm_stream_t stream, char**name_out,
 			if (*descr) free(*descr);
 		} else {
 			if (*descr == NULL) {
-				*descr = (char *)malloc(4);
+				*descr =(char*)(malloc(4));
 				memset(*descr, 0, 4);
 			}
 			name++;
@@ -594,7 +594,7 @@ fail:
 record_dev_id  get_default_input_dev()
 {
 	record_dev_id id; 
-	id.u.name = (char *)"default";
+	id.u.name = (char*)("default");
 	return id;
 }
 

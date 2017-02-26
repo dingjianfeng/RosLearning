@@ -1,5 +1,5 @@
 <launch>
 <node pkg="xfros"  type="tts_voice_node" name="tts_voice_node"  output="screen"></node>
-<node pkg="xfros"  type="tuling_nlp_node" name="tuling_nlp_node"  output="screen"></node>
+<node pkg="xfros"  type="tuling_arv_node" name="tuling_arv_node"  output="screen"></node>
 <node pkg="xfros"  type="xf_asr_node" name="xf_asr_node"  output="screen"></node>
 </launch>
