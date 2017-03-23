@@ -4,7 +4,9 @@ roswithxf nlp use the xunfei sdk
 xfros  nlp use the tuling API
 
 roswithxf和xfros都是讯飞语音sdk在ros中的集成，唯一不同的是roswithxf中的语义理解用的是讯飞本身的sdk，而xfros中的语义理解使用的是图灵API。
+
 xfros：
+
 xf_tts.cpp:将文字实时转化为连续的自然语音，并播放出来。初始化xf_tts_node节点，订阅/voice/xf_tts_topic。
 
 tuling_arv.cpp:调用图灵API，进行语义解析。初始化tuling_arv_node节点，订阅/voice/tuling_arv_topic,将语义解析的结果发布到/voice        /xf_tts_topic。
