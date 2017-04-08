@@ -28,6 +28,23 @@ xf_asr.cpp,linuxrec.cpp,speech_recognizer.cpp:语音听写，能实时将语音�
 
 目前，由于语音唤醒部分未能实现，当手动向话题/voice_xf_asr_topic发布1时，调用回调函数进行语音听写并实现语义理解，语音合成这一整个流程。当语音唤醒部分实现后，当用户进行语音唤醒时，自动向话题/voice_xf_asr_topic发送信息，从而实现这一过程。
       
+     
+注意：
 
+1.appid要改为自己的账号
+
+2.因为xf_tts.cpp要播放音频，因此需要安装sox：
+   
+    sudo apt-get install sox
+
+3.因为tuling_arv.cpp使用了json格式数据进行通讯，程序中会用到json，curl，因此需要安装相应的库：
+
+    sudo apt-get install libcurl3 libcur14-openssl-dev
+  
+    sudo apt-get install libjsoncpp0 libjsoncpp-dev
+    
+    
+4.将下载的讯飞libmsc.so文件放到系统的/usr/lib目录下，根据你自己安装的系统是32bit还是64bit，选择x86还是x64.
+    
      
       
