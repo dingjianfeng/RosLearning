@@ -44,7 +44,7 @@ xf_asr.cpp,linuxrec.cpp,speech_recognizer.cpp:语音听写，能实时将语音�
     sudo apt-get install libjsoncpp0 libjsoncpp-dev
     
     
-4.将下载的讯飞libmsc.so文件放到系统的/usr/lib目录下，根据你自己安装的系统是32bit还是64bit，选择x86还是x64.
+4.将下载的讯飞libmsc.so文件放到系统的/usr/lib目录下，根据你自己安装的系统是32bit还是64bit，选择x86还是x64。
   libs目录下是libmsc.so文件  
      
       
