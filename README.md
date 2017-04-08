@@ -30,14 +30,15 @@ xf_asr.cpp,linuxrec.cpp,speech_recognizer.cpp:语音听写，能实时将语音�
       
      
 注意：
+
 1.appid要改为自己的账号
 
 2.因为xf_tts.cpp要播放音频，因此需要安装sox：sudo apt-get install sox
 
 3.因为tuling_arv.cpp使用了json格式数据进行通讯，程序中会用到json，curl，因此需要安装相应的库：
 
-  sudo apt-get install libcurl3 libcur14-openssl-dev
+    sudo apt-get install libcurl3 libcur14-openssl-dev
   
-  sudo apt-get install libjsoncpp0 libjsoncpp-dev
+    sudo apt-get install libjsoncpp0 libjsoncpp-dev
      
       
