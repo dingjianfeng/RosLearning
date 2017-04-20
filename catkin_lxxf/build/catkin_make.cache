@@ -1,0 +1,2 @@
+lxxf
+-DCATKIN_DEVEL_PREFIX=/home/ding/catkin_lxxf/devel -DCMAKE_INSTALL_PREFIX=/home/ding/catkin_lxxf/install -G Unix Makefiles

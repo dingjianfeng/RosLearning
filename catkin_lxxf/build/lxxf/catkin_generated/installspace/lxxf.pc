@@ -1,0 +1,8 @@
+prefix=/home/ding/catkin_lxxf/install
+
+Name: lxxf
+Description: Description of lxxf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ding/catkin_lxxf/install/lib 
+Requires: 
