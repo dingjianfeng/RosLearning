@@ -1,0 +1,45 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar test;
+!slot <cmdleft>; 
+!slot <cmdright>;
+!slot <cmdfront>;
+!slot <cmdback>;
+!slot <cmdstop>;
+!slot <cmdbegin>;
+!slot <cmdpause>;
+!slot <cmdrestart>;
+!slot <optsend>;
+!slot <optcancel>;
+
+
+!start <mainaction>;
+<mainaction>:<cmdactionleft>|<cmdactionright>|<cmdactionfront>|<cmdactionback>|
+<cmd1>|<cmd2>|<cmd3>|<cmd4>|<smsaction2>|<smsaction3>|<test>;
+<cmdactionleft>:<cmdleft>;
+<cmdactionright>:<cmdright>;
+<cmdactionfront>:<cmdfront>;
+<cmdactionback>:<cmdback>;
+<cmd1>:<cmdstop>;
+<cmd2>:<cmdbegin>;
+<cmd3>:<cmdpause>;
+<cmd4>:<cmdrestart>;
+
+
+<smsaction2>:<optsend>;
+<smsaction3>:<optcancel>;
+
+
+<cmdleft>:左转;
+<cmdright>:右转;
+<cmdfront>:前进;
+<cmdback>:后退;
+<cmdstop>:停止;
+<cmdbegin>:开始;
+<cmdpause>:暂停;
+<cmdrestart>:再来一遍;
+
+
+<optsend>:确定|确认|发送|接受|发送短信|短信发送|左转;
+<optcancel>:取消|不发送|别发送|取消发送|取消发送短信;
+
+<test>:测试;
